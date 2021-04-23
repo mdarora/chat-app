@@ -11,12 +11,15 @@
 ::-webkit-scrollbar-thumb{
     background-color: #2A2A2A;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--background-color);
     min-height: 100vh;
 }
 .messeges{
-    overflow-y: scroll;
+    overflow-x: auto;
     padding-top: 8px;
     padding-bottom: 50px;
 }
@@ -28,13 +31,19 @@ body{
     clear: both;
 }
 .message{
-    color: #fff;
+    color: #ffffff4f;
     clear: both;
     padding: 8px;
-    width: 500px;
-    max-width: 95%;
+    width: 200px;
+    max-width: 90%;
     margin-bottom: 8px;
     border-radius: 8px;
+}
+.message b{
+ color: #fff;
+}
+.message small{
+    color: #948fed;
 }
 .message.left{
     float: left;

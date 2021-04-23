@@ -17,5 +17,12 @@ io.on("connection", (socket)=>{
     socket.on("send", message =>{
         socket.broadcast.emit("received", {"message": message, "name":users[socket.id]});
     });
+    socket.on("disconnect", (message)=>{
+        console.log(message);
+        if (message == "transport close"){
+            socket.broadcast.emit("left", users[socket.id]);
+            delete users[socket.id];
+        }
+    })
 
 });
